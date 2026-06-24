@@ -1,0 +1,22 @@
+P:¿Es una película de animación o dibujos animados?
+P:¿El protagonista es un ogro verde que vive en un pantano?
+R:Shrek
+P:¿Trata sobre un cachorro de león llamado Simba que hereda un reino?
+R:El Rey León
+P:¿Los protagonistas son juguetes que cobran vida cuando los humanos no ven?
+R:Toy Story
+P:¿Es una película ambientada en el océano sobre un pez payaso perdido?
+R:Buscando a Nemo
+R:Spirited Away (El Viaje de Chihiro)
+P:¿Es una película de ciencia ficción o fantasía espacial?
+P:¿Existe un concepto llamado "La Fuerza" y salen caballeros Jedi?
+R:Star Wars
+P:¿Trata sobre un anillo mágico que debe ser destruido en un volcán?
+R:El Señor de los Anillos
+P:¿El protagonista viaja en el tiempo usando un auto DeLorean?
+R:Volver al Futuro
+P:¿Es una película donde la gente vive atrapada dentro de una simulación virtual de computadoras?
+R:The Matrix
+P:¿Se desarrolla en un gran barco transatlántico que choca contra un iceberg?
+R:Titanic
+R:Harry Potter y la Piedra Filosofal

@@ -1,0 +1,21 @@
+P:¿Es un animal que vive principalmente en el agua (marino o acuático)?
+P:¿Es el mamífero más grande del mundo y expulsa agua por un espiráculo?
+R:ballena azul
+P:¿Es un mamífero muy inteligente que hace sonidos de chasquidos y salta en el océano?
+R:delfín
+P:¿Es un pez depredador con varias filas de dientes afilados?
+R:tiburón
+P:¿Tiene un caparazón duro y puede vivir tanto en tierra como en el mar?
+R:tortuga marina
+R:pulpo
+P:¿Es capaz de volar?
+P:¿Es un ave rapaz nocturna que puede girar mucho la cabeza?
+R:búho
+R:pingüino
+P:¿Es un reptil grande con escamas que pasa mucho tiempo flotando en ríos o pantanos?
+R:cocodrilo
+P:¿Es un felino grande con una melena imponente, conocido como el rey de la selva?
+R:león
+P:¿Es el mejor amigo del hombre, ladra y mueve la cola?
+R:perro
+R:elefante

@@ -1,0 +1,21 @@
+P:¿El país se encuentra en el continente americano?
+P:¿Está ubicado en América del Norte?
+R:Canadá
+P:¿Su idioma oficial es mayoritariamente el portugués?
+R:Brasil
+P:¿Es famoso por su gastronomía como los tacos y la cultura azteca?
+R:México
+P:¿Tiene una silueta muy larga y delgada junto al océano Pacífico?
+R:Chile
+R:Argentina
+P:¿El país forma parte de la Unión Europea?
+P:¿Su capital es París y es famoso por la Torre Eiffel?
+R:Francia
+P:¿Es conocido por su historia de gladiadores, el Coliseo y la pizza?
+R:Italia
+P:¿Se encuentra en la península ibérica y su capital es Madrid?
+R:España
+R:Alemania
+P:¿Es el país más poblado del mundo y está en Asia?
+R:India
+R:Egipto

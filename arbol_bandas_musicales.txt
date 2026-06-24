@@ -1,0 +1,21 @@
+P:¿Es una banda o artista cuyo género principal es el Rock o Metal?
+P:¿Es una banda británica legendaria liderada por Freddie Mercury?
+R:Queen
+P:¿Sus cuatro integrantes son originarios de Liverpool y revolucionaron los años 60?
+R:The Beatles
+P:¿Es una banda de metal conocida por su mascota "Eddie the Head" y guitarras pesadas?
+R:Iron Maiden
+P:¿Es una banda estadounidense de Thrash Metal liderada por James Hetfield?
+R:Metallica
+R:AC/DC
+P:¿El artista o grupo pertenece principalmente al género Pop?
+P:¿Es conocido mundialmente como el "Rey del Pop"?
+R:Michael Jackson
+P:¿Es una famosa banda de K-Pop de Corea del Sur formada por siete integrantes?
+R:BTS
+P:¿Es una de las artistas femeninas más influyentes de la actualidad con su gira "The Eras Tour"?
+R:Taylor Swift
+R:Madonna
+P:¿Es un artista o grupo enfocado en la música electrónica o urbana?
+R:Daft Punk
+R:Bob Marley

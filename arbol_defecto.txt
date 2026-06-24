@@ -1,3 +1,13 @@
 P:¿Es un animal?
 R:perro
+P:¿Es plano y más grande que una computadora?
+R:Televisor
+P:¿es comestible?
+R:fruta
+P:¿se usa para almacenar información en computadoras?
+P:¿es más pequeño a una llave maya?
+R:llave maya
+P:¿Es más pequeño que una llave maya?
+R:tarjeta SD
+R:disco duro
 R:computadora
