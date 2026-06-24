@@ -69,7 +69,59 @@ class ArbolDecision:
             self.nodo_actual.izquierdo = nodo_viejo
             self.nodo_actual.derecho = nodo_nuevo
         
+    #Manejo de archivos
+
+class ManejadorArchivos:
+    #se encarga de manejar el arbol en archivos .txt
+
+    def guardar(self,raiz, ruta_archivo):
+        lineas = []
+        self.preorden_a_lineas(raiz,lineas)
+        with open(ruta_archivo, "w", encoding= "utf-8") as f:
+            f.write("\n".join(lineas))
+
+    def preorden_a_lineas(self,nodo,lineas):
+        if nodo is None:
+            return
+        
+        prefijo = "P:" if nodo.es_pregunta else "R:"
+        lineas.append(f"{prefijo}{nodo.valor}")
+        self._preorden_a_lineas(nodo.izquierdo, lineas)
+        self._preorden_a_lineas(nodo.derecho, lineas)
     
+    def cargar(self, ruta_archivo):
+        """Lee el archivo de texto y reconstruye el árbol binario de decisión."""
+        if not os.path.exists(ruta_archivo):
+            raise FileNotFoundError("El archivo especificado no existe.")
+            
+        with open(ruta_archivo, 'r', encoding='utf-8') as f:
+            lineas = [linea.strip() for linea in f.readlines() if linea.strip()]
+            
+        if not lineas:
+            raise ValueError("El archivo está vacío.")
+            
+        iterador_lineas = iter(lineas)
+        raiz = self._lineas_a_arbol(iterador_lineas)
+        return raiz
+
+    def _lineas_a_arbol(self, iterador):
+        try:
+            linea = next(iterador)
+        except StopIteration:
+            return None
+            
+        if not (linea.startswith("P:") or linea.startswith("R:")):
+            raise ValueError("Formato de archivo incorrecto.")
+            
+        es_pregunta = linea.startswith("P:")
+        valor = linea[2:]
+        
+        nodo = Nodo(valor, es_pregunta)
+        if es_pregunta:
+            nodo.izquierdo = self._lineas_a_arbol(iterador)
+            nodo.derecho = self._lineas_a_arbol(iterador)
+        return nodo
+#revisar ultimos cambios
 
 
         
