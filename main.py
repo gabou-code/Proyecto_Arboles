@@ -9,8 +9,8 @@ class Nodo:
     def __init__(self, valor, es_pregunta = True):
         self.valor = valor
         self.es_pregunta = es_pregunta
-        self.izquierda = None #rama para el si
-        self.derecha = None #rama para el no
+        self.izquierd0 = None #rama para el si
+        self.derecho = None #rama para el no
 
     def es_hoja(self):
         return not self.es_pregunta
@@ -25,7 +25,7 @@ class ArbolDecision:
     def crear_arbol_defecto(self):
         #crea un arbol basico por defecto si no se carga ningún archivo
         raiz = Nodo("¿Es un animal?", es_pregunta= True)
-        raiz.izquierda = Nodo("perro", es_pregunta= False)
+        raiz.izquierdo = Nodo("perro", es_pregunta= False)
         raiz.derecho = Nodo("computadora", es_pregunta=False)
         return raiz
     
@@ -44,11 +44,11 @@ class ArbolDecision:
         
         if respuesta_si:
 
-            if self.nodo_actual.izquierda is not None:
-                self.nodo_actual = self.nodo_actual.izquierda
+            if self.nodo_actual.izquierdo is not None:
+                self.nodo_actual = self.nodo_actual.izquierdo
         else:
-            if self.nodo_actual.derecha is not None:
-                self.nodo_actual = self.nodo_actual.derecha 
+            if self.nodo_actual.derecho is not None:
+                self.nodo_actual = self.nodo_actual.derecho 
 
     #funcion para añadir pregunta y respuesta
     def aprender(self, respuesta_incorrecta, nueva_respuesta, nueva_pregunta, respuesta_para_nueva):
@@ -86,8 +86,8 @@ class ManejadorArchivos:
         
         prefijo = "P:" if nodo.es_pregunta else "R:"
         lineas.append(f"{prefijo}{nodo.valor}")
-        self._preorden_a_lineas(nodo.izquierdo, lineas)
-        self._preorden_a_lineas(nodo.derecho, lineas)
+        self.preorden_a_lineas(nodo.izquierdo, lineas)
+        self.preorden_a_lineas(nodo.derecho, lineas)
     
     def cargar(self, ruta_archivo):
         """Lee el archivo de texto y reconstruye el árbol binario de decisión."""
@@ -128,8 +128,8 @@ class ManejadorArchivos:
 class App:
     def __init__(self, root):
         self.root = root
-        self.root.title = ("Adivina en qué estoy pensando")
-        self.root.geometry = ("500x400")
+        self.root.title("Adivina en qué estoy pensando")
+        self.root.geometry("500x400")
         self.root.config(bg = "#d64343")
 
         #instancias base de logica y persistencia
@@ -238,33 +238,7 @@ class App:
         messagebox.showinfo("¡Ganador!", "¡Excelente! He adivinado correctamente.")
         self.mostrar_pantalla_inicial()
 
-    def abrir_formulario_aprendizaje(self):
-        """Despliega una ventana emergente estructurada para capturar los nuevos nodos."""
-        ventana_aprender = tk.Toplevel(self.root)
-        ventana_aprender.title("Enseñar al sistema")
-        ventana_aprender.geometry("400x320")
-        ventana_aprender.grab_set()  
-        
-        # FIJAMOS EL VALOR DEL NODO INCORRECTO AQUÍ PARA EVITAR PROBLEMAS DE REFERENCIA EN LÓGICA DE TKINTER
-        nodo_incorrecto_fijo = str(self.arbol.nodo_actual.valor)
-
-        tk.Label(ventana_aprender, text="¡Me rindo! Ayúdame a aprender.", font=("Arial", 12, "bold")).pack(pady=10)
-        
-        tk.Label(ventana_aprender, text="¿En qué elemento estabas pensando?").pack()
-        txt_nuevo = tk.Entry(ventana_aprender, width=40)
-        txt_nuevo.pack(pady=2)
-        txt_nuevo.focus_set()
-        
-        tk.Label(ventana_aprender, text=f"Escribe una pregunta que diferencie tu elemento de '{nodo_incorrecto_fijo}':").pack()
-        txt_pregunta = tk.Entry(ventana_aprender, width=40)
-        txt_pregunta.pack(pady=2)
-        
-        tk.Label(ventana_aprender, text=f"Para tu elemento, ¿la respuesta a esa pregunta es Sí o No?").pack(pady=5)
-        
-        var_opcion = tk.StringVar(value="Si")
-        tk.Radiobutton(ventana_aprender, text="Sí", variable=var_opcion, value="Si").pack()
-        tk.Radiobutton(ventana_aprender, text="No", variable=var_opcion, value="No").pack()
-
+    
     def abrir_formulario_aprendizaje(self):
         """Despliega una ventana emergente estructurada para capturar los nuevos nodos."""
         ventana_aprender = tk.Toplevel(self.root)
