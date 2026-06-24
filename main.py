@@ -101,10 +101,10 @@ class ManejadorArchivos:
             raise ValueError("El archivo está vacío.")
             
         iterador_lineas = iter(lineas)
-        raiz = self._lineas_a_arbol(iterador_lineas)
+        raiz = self.lineas_a_arbol(iterador_lineas)
         return raiz
 
-    def _lineas_a_arbol(self, iterador):
+    def lineas_a_arbol(self, iterador):
         try:
             linea = next(iterador)
         except StopIteration:
@@ -118,8 +118,8 @@ class ManejadorArchivos:
         
         nodo = Nodo(valor, es_pregunta)
         if es_pregunta:
-            nodo.izquierdo = self._lineas_a_arbol(iterador)
-            nodo.derecho = self._lineas_a_arbol(iterador)
+            nodo.izquierdo = self.lineas_a_arbol(iterador)
+            nodo.derecho = self.lineas_a_arbol(iterador)
         return nodo
 
 
