@@ -9,7 +9,7 @@ class Nodo:
     def __init__(self, valor, es_pregunta = True):
         self.valor = valor
         self.es_pregunta = es_pregunta
-        self.izquierd0 = None #rama para el si
+        self.izquierdo = None #rama para el si
         self.derecho = None #rama para el no
 
     def es_hoja(self):
